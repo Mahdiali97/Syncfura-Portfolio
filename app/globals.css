@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --bg: #08061a;
+  /* Light theme — #FAFAFA dominant */
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --text: #1a1a2e;
+  --text-soft: #443562;
+  --text-muted: #6b6480;
+  --accent: #aa6fff;
+  --accent-deep: #443562;
 }
 
 html {
@@ -11,115 +18,68 @@ html {
 }
 
 body {
-  background-color: #08061a;
-  color: #e2ddf5;
+  background-color: #fafafa;
+  color: #1a1a2e;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ─── Text Gradients ─────────────────────────────── */
+/* Violet text gradient (on light bg) */
 .text-gradient {
-  background: linear-gradient(120deg, #ffffff 0%, #c4b5fd 45%, #a855f7 100%);
+  background: linear-gradient(120deg, #443562 0%, #6d4aa8 45%, #aa6fff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .text-gradient-violet {
-  background: linear-gradient(120deg, #a855f7 0%, #7c3aed 100%);
+  background: linear-gradient(120deg, #aa6fff 0%, #443562 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Soft lilac gradient — used in Projects heading */
-.text-gradient-soft {
-  background: linear-gradient(120deg, #c4b5fd 0%, #a78bfa 50%, #818cf8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* ─── Glass Cards ────────────────────────────────── */
-/* Standard dark glass */
+/* Glass card — light variant */
 .glass {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(168, 85, 247, 0.18);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(170, 111, 255, 0.22);
+  backdrop-filter: blur(12px);
 }
 
 .glass:hover {
-  border-color: rgba(168, 85, 247, 0.4);
-  box-shadow: 0 0 40px -10px rgba(124, 58, 237, 0.4);
+  border-color: rgba(170, 111, 255, 0.55);
+  box-shadow: 0 0 36px -12px rgba(170, 111, 255, 0.45);
 }
 
-/* Soft light glass — for project cards */
-.glass-soft {
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-.glass-soft:hover {
-  background: rgba(255, 255, 255, 0.055);
-  border-color: rgba(167, 139, 250, 0.35);
-  box-shadow:
-    0 8px 40px -12px rgba(124, 58, 237, 0.35),
-    0 0 0 1px rgba(167, 139, 250, 0.12) inset;
-}
-
-/* ─── Section Glows ──────────────────────────────── */
+/* Section radial backdrop — soft violet on light */
 .section-glow {
   background-image: radial-gradient(
       circle at 15% 10%,
-      rgba(124, 58, 237, 0.15),
+      rgba(170, 111, 255, 0.12),
       transparent 45%
     ),
     radial-gradient(
       circle at 85% 90%,
-      rgba(168, 85, 247, 0.12),
+      rgba(68, 53, 98, 0.08),
       transparent 45%
     );
 }
 
-/* Projects section has its own softer glow */
-.projects-section {
-  background-image:
-    radial-gradient(ellipse at 20% 0%, rgba(99, 102, 241, 0.07) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 100%, rgba(139, 92, 246, 0.07) 0%, transparent 50%);
-}
-
-/* ─── Project Image Wrap ─────────────────────────── */
-.project-image-wrap {
-  box-shadow:
-    0 4px 32px -8px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
-}
-
-.project-card:hover .project-image-wrap {
-  box-shadow:
-    0 12px 48px -8px rgba(99, 102, 241, 0.3),
-    0 0 0 1px rgba(167, 139, 250, 0.2) inset;
-}
-
-/* ─── Custom Scrollbar ───────────────────────────── */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #08061a;
+  background: #f0eef5;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(76, 29, 149, 0.7);
+  background: #c9b8e6;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c3aed;
+  background: #aa6fff;
 }
 
 ::selection {
-  background: rgba(168, 85, 247, 0.35);
-  color: #fff;
+  background: rgba(170, 111, 255, 0.3);
+  color: #1a1a2e;
 }

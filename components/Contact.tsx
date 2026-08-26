@@ -18,7 +18,7 @@ export default function Contact() {
   };
 
   const input =
-    "w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder-[#8b84ad] outline-none focus:border-violet-glow focus:ring-2 focus:ring-violet-electric/30 transition";
+    "w-full rounded-xl bg-white/70 border border-ink/10 px-4 py-3 text-ink placeholder-ink-muted/70 outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 transition";
 
   return (
     <section id="contact" className="relative py-24 sm:py-32 section-glow">
@@ -26,22 +26,22 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left: HQ + intro */}
           <Reveal>
-            <span className="text-sm font-semibold tracking-[0.3em] text-violet-glow uppercase">
+            <span className="text-sm font-semibold tracking-[0.3em] text-accent uppercase">
               Contact
             </span>
-            <h2 className="mt-4 text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+            <h2 className="mt-4 text-3xl sm:text-5xl font-extrabold text-ink leading-tight">
               Let&rsquo;s build your{" "}
               <span className="text-gradient-violet">digital backbone</span>
             </h2>
-            <p className="mt-5 text-lg text-[#b9b2d6] max-w-md">
+            <p className="mt-5 text-lg text-ink-muted max-w-md">
               Tell us about your project. From idea to digital — built to last.
             </p>
 
             <div className="mt-8 flex items-start gap-3 glass rounded-2xl p-5">
-              <MapPin className="text-violet-glow mt-0.5 shrink-0" size={22} />
+              <MapPin className="text-accent mt-0.5 shrink-0" size={22} />
               <div>
-                <p className="text-white font-semibold">Headquarters</p>
-                <p className="text-[#b9b2d6]">Tanjong Malim, Perak, Malaysia</p>
+                <p className="text-ink font-semibold">Headquarters</p>
+                <p className="text-ink-muted">Tanjong Malim, Perak, Malaysia</p>
               </div>
             </div>
           </Reveal>
@@ -53,7 +53,7 @@ export default function Contact() {
               className="glass rounded-3xl p-7 sm:p-9 space-y-5"
             >
               <div>
-                <label className="block text-sm text-[#cdc7e6] mb-2">
+                <label className="block text-sm text-ink-soft mb-2">
                   Name
                 </label>
                 <input
@@ -67,7 +67,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-[#cdc7e6] mb-2">
+                <label className="block text-sm text-ink-soft mb-2">
                   Email
                 </label>
                 <input
@@ -82,7 +82,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label className="block text-sm text-[#cdc7e6] mb-2">
+                <label className="block text-sm text-ink-soft mb-2">
                   Message
                 </label>
                 <textarea
@@ -98,7 +98,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-electric to-violet-glow px-6 py-3.5 font-semibold text-white shadow-[0_0_28px_-6px_rgba(168,85,247,0.8)] hover:shadow-[0_0_38px_-4px_rgba(168,85,247,1)] transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-accent-deep px-6 py-3.5 font-semibold text-white shadow-[0_0_28px_-6px_rgba(170,111,255,0.6)] hover:bg-[#5a4880] transition-all"
               >
                 {sent ? (
                   <>
@@ -115,19 +115,19 @@ export default function Contact() {
         </div>
 
         {/* Footer */}
-        <div className="mt-24 border-t border-white/10 pt-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-24 border-t border-ink/10 pt-10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Logo variant="light" markSize={32} />
-          <p className="text-sm text-[#8b84ad]">
+          <p className="text-sm text-ink-muted">
             © 2026 AVENIQTECH SDN. BHD.
           </p>
-          <div className="flex gap-6 text-sm text-[#8b84ad]">
-            <a href="#about" className="hover:text-violet-glow transition">
+          <div className="flex gap-6 text-sm text-ink-muted">
+            <a href="#about" className="hover:text-accent transition">
               About
             </a>
-            <a href="#services" className="hover:text-violet-glow transition">
+            <a href="#services" className="hover:text-accent transition">
               Services
             </a>
-            <a href="#team" className="hover:text-violet-glow transition">
+            <a href="#team" className="hover:text-accent transition">
               Team
             </a>
           </div>

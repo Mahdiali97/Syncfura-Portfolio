@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
@@ -12,7 +11,6 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
-      <Projects />
       <About />
       <Services />
       <Team />

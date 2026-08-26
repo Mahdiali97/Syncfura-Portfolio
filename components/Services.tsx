@@ -31,14 +31,14 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <Reveal>
           <div className="text-center max-w-3xl mx-auto">
-            <span className="text-sm font-semibold tracking-[0.3em] text-violet-glow uppercase">
+            <span className="text-sm font-semibold tracking-[0.3em] text-accent uppercase">
               What We Do
             </span>
-            <h2 className="mt-4 text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+            <h2 className="mt-4 text-3xl sm:text-5xl font-extrabold text-ink leading-tight">
               Core{" "}
               <span className="text-gradient-violet">Solutions</span>
             </h2>
-            <p className="mt-5 text-lg text-[#b9b2d6]">
+            <p className="mt-5 text-lg text-ink-muted">
               Three pillars of engineering that form the digital backbone of
               modern enterprises.
             </p>
@@ -51,22 +51,22 @@ export default function Services() {
             return (
               <Reveal key={s.title} delay={i * 0.12}>
                 <div className="glass rounded-2xl p-7 h-full flex flex-col transition-transform duration-300 hover:-translate-y-1.5">
-                  <div className="grid place-items-center w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-electric/30 to-violet-glow/15 border border-violet-electric/30 mb-6">
-                    <Icon className="text-violet-glow" size={26} />
+                  <div className="grid place-items-center w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/30 to-accent/15 border border-accent/30 mb-6">
+                    <Icon className="text-accent" size={26} />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-ink mb-3">
                     {s.title}
                   </h3>
-                  <p className="text-[#b9b2d6] leading-relaxed flex-1">
+                  <p className="text-ink-muted leading-relaxed flex-1">
                     {s.desc}
                   </p>
                   <ul className="mt-5 space-y-2">
                     {s.points.map((p) => (
                       <li
                         key={p}
-                        className="flex items-center gap-2 text-sm text-[#cdc7e6]"
+                        className="flex items-center gap-2 text-sm text-ink-soft"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-violet-glow" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                         {p}
                       </li>
                     ))}

@@ -10,13 +10,13 @@ export default function Partners() {
         {/* Partners grid */}
         <Reveal>
           <div className="text-center max-w-3xl mx-auto">
-            <span className="text-sm font-semibold tracking-[0.3em] text-violet-glow uppercase">
+            <span className="text-sm font-semibold tracking-[0.3em] text-accent uppercase">
               Trusted By
             </span>
-            <h2 className="mt-4 text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+            <h2 className="mt-4 text-3xl sm:text-5xl font-extrabold text-ink leading-tight">
               Our <span className="text-gradient-violet">Partners</span>
             </h2>
-            <p className="mt-5 text-lg text-[#b9b2d6]">
+            <p className="mt-5 text-lg text-ink-muted">
               We collaborate with forward-thinking teams to deliver lasting
               digital infrastructure.
             </p>
@@ -29,10 +29,10 @@ export default function Partners() {
               <div className="glass rounded-2xl h-32 grid place-items-center text-center px-4 transition-transform duration-300 hover:-translate-y-1.5">
                 <div>
                   <Handshake
-                    className="mx-auto text-violet-glow/70 mb-2"
+                    className="mx-auto text-accent/70 mb-2"
                     size={22}
                   />
-                  <span className="text-lg font-semibold text-white tracking-wide">
+                  <span className="text-lg font-semibold text-ink tracking-wide">
                     {p}
                   </span>
                 </div>
@@ -43,22 +43,22 @@ export default function Partners() {
 
         {/* CEO message */}
         <Reveal delay={0.1}>
-          <div className="mt-16 relative overflow-hidden rounded-3xl border border-violet-electric/30 bg-gradient-to-br from-violet-electric/15 via-transparent to-violet-glow/10 p-10 sm:p-16 text-center">
+          <div className="mt-16 relative overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-br from-accent/15 via-transparent to-accent/10 p-10 sm:p-16 text-center">
             <Quote
-              className="mx-auto text-violet-glow/80 mb-6 animate-pulse-glow"
+              className="mx-auto text-accent/80 mb-6 animate-pulse-glow"
               size={40}
             />
-            <blockquote className="text-2xl sm:text-3xl font-bold text-white leading-snug max-w-4xl mx-auto">
+            <blockquote className="text-2xl sm:text-3xl font-bold text-ink leading-snug max-w-4xl mx-auto">
               &ldquo;True digital transformation requires more than just
               deploying new technology—it demands a foundation of absolute
               reliability.&rdquo;
             </blockquote>
             <div className="mt-7 flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-violet-glow/60" />
-              <span className="text-violet-glow font-semibold tracking-wide">
+              <span className="h-px w-8 bg-accent/60" />
+              <span className="text-accent font-semibold tracking-wide">
                 Aisyatul Hani, CEO
               </span>
-              <span className="h-px w-8 bg-violet-glow/60" />
+              <span className="h-px w-8 bg-accent/60" />
             </div>
           </div>
         </Reveal>

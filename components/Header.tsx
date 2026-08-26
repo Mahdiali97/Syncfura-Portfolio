@@ -5,7 +5,6 @@ import Logo from "./Logo";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Team", href: "#team" },
@@ -28,7 +27,7 @@ export default function Header() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0618]/85 backdrop-blur-xl border-b border-violet-electric/15 py-3"
+          ? "bg-[#fafafa]/85 backdrop-blur-xl border-b border-accent/15 py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -42,22 +41,22 @@ export default function Header() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-[#cbd3ec] hover:text-white transition-colors relative group"
+              className="text-sm font-medium text-ink-soft hover:text-accent-deep transition-colors relative group"
             >
               {l.label}
-              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-violet-glow group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-accent group-hover:w-full transition-all duration-300" />
             </a>
           ))}
           <a
             href="#contact"
-            className="rounded-full bg-gradient-to-r from-violet-electric to-violet-glow px-5 py-2 text-sm font-semibold text-white shadow-[0_0_20px_-4px_rgba(168,85,247,0.7)] hover:shadow-[0_0_28px_-2px_rgba(168,85,247,0.9)] transition-all"
+            className="rounded-full bg-accent-deep px-5 py-2 text-sm font-semibold text-white hover:bg-[#5a4880] transition-all"
           >
             Get in Touch
           </a>
         </nav>
 
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden text-ink-soft p-2"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -66,13 +65,13 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-[#0a0618]/95 backdrop-blur-xl border-b border-violet-electric/15 px-5 py-4 flex flex-col gap-4">
+        <nav className="md:hidden bg-[#fafafa]/95 backdrop-blur-xl border-b border-accent/15 px-5 py-4 flex flex-col gap-4">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-[#cbd3ec] hover:text-white text-base font-medium"
+              className="text-ink-soft hover:text-accent-deep text-base font-medium"
             >
               {l.label}
             </a>
@@ -80,7 +79,7 @@ export default function Header() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="rounded-full bg-gradient-to-r from-violet-electric to-violet-glow px-5 py-2 text-center text-sm font-semibold text-white"
+            className="rounded-full bg-accent-deep px-5 py-2 text-center text-sm font-semibold text-white"
           >
             Get in Touch
           </a>

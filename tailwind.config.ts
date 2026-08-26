@@ -8,21 +8,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        indigo: {
-          deep: "#1A1040",
-          DEFAULT: "#2D1B69",
+        // Light theme palette — #FAFAFA dominant
+        ink: {
+          DEFAULT: "#1a1a2e", // primary text on light
+          soft: "#443562", // deep indigo (secondary text / button)
+          muted: "#6b6480", // muted body text
         },
-        violet: {
-          electric: "#7C3AED",
-          glow: "#A855F7",
+        accent: {
+          DEFAULT: "#aa6fff", // light violet accent
+          deep: "#443562", // dark button base
         },
+        paper: "#fafafa", // dominant background
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       backgroundImage: {
         "grid-glow":
-          "radial-gradient(circle at 50% 0%, rgba(124,58,237,0.25), transparent 55%)",
+          "radial-gradient(circle at 50% 0%, rgba(170,111,255,0.18), transparent 55%)",
       },
       keyframes: {
         "fade-up": {

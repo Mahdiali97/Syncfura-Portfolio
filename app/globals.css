@@ -52,29 +52,28 @@ body {
 
 /* Section radial backdrop — soft violet on light */
 .section-glow {
-  background-image: radial-gradient(
-      circle at 15% 10%,
+  background-image: radial-gradient(circle at 15% 10%,
       rgba(170, 111, 255, 0.12),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at 85% 90%,
+      transparent 45%),
+    radial-gradient(circle at 85% 90%,
       rgba(68, 53, 98, 0.08),
-      transparent 45%
-    );
+      transparent 45%);
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f0eef5;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #c9b8e6;
   border-radius: 8px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #aa6fff;
 }
@@ -82,4 +81,24 @@ body {
 ::selection {
   background: rgba(170, 111, 255, 0.3);
   color: #1a1a2e;
+}
+
+/* Thin scrollbar for modal popup */
+.modal-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: rgba(170, 111, 255, 0.35);
+  border-radius: 99px;
+}
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(170, 111, 255, 0.6);
+}
+/* Firefox */
+.modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(170, 111, 255, 0.35) transparent;
 }

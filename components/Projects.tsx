@@ -25,7 +25,7 @@ const projects: Project[] = [
     description:
       "A web-based platform that automates the full lifecycle of teacher invigilation scheduling — from initial duty assignment and clash detection through to last-minute replacements and real-time tracking. Administrators gain a live dashboard view of all upcoming exams, pending slots, and confirmed invigilators.",
     tools: ["Laravel", "MySQL", "Blade", "HTML/CSS", "JavaScript"],
-    image: "/projects/project1.png",
+    image: "/public/projects/project1.png",
     category: "Web Platform",
     accentFrom: "#6366f1",
     accentTo: "#8b5cf6",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     description:
       "A mobile application designed to bring energy literacy to students and home users. WattAware lets users log appliances, understand consumption patterns through interactive lesson modules, simulate monthly bills, and receive personalised energy-saving tips — all in a playful, gamified interface.",
     tools: ["Flutter", "Firebase"],
-    image: "/projects/project2.jpeg",
+    image: "/public/projects/project2.jpeg",
     category: "Mobile App",
     accentFrom: "#10b981",
     accentTo: "#06b6d4",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     description:
       "A cross-platform mobile solution that replaces paper-based intake forms at disaster relief centres. MYAid enables on-site volunteers to register evacuees digitally, auto-validates data, and syncs records in real-time to a central dashboard — dramatically reducing errors and accelerating the distribution of aid.",
     tools: ["Flutter", "Firebase"],
-    image: "/projects/project3.jpeg",
+    image: "/public/projects/project3.jpeg",
     category: "Mobile App",
     accentFrom: "#3b82f6",
     accentTo: "#6366f1",
@@ -61,7 +61,7 @@ const projects: Project[] = [
     description:
       "A public transit companion app for Putrajaya bus passengers. The app shows live bus positions on a map, calculates optimal routes, displays nearby stops, and lets riders share trip plans with friends. Built with RESTful transit APIs for accurate, low-latency position updates.",
     tools: ["Flutter", "Firebase", "RESTful APIs"],
-    image: "/projects/project4.jpeg",
+    image: "/public/projects/project4.jpeg",
     category: "Mobile App",
     accentFrom: "#7c3aed",
     accentTo: "#a855f7",
@@ -73,7 +73,7 @@ const projects: Project[] = [
     description:
       "A full-featured Customer Relationship Management system built for the GEP platform. It provides company-level subscriber management, geographic zone assignment, on-site premise tracking, automated invoice generation, and role-based access control — giving the operations team a single source of truth for all client activity.",
     tools: ["React", "TypeScript", "MySQL"],
-    image: "/projects/project5.png",
+    image: "/public/projects/project5.png",
     category: "Web Platform",
     accentFrom: "#f43f5e",
     accentTo: "#ec4899",

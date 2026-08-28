@@ -10,7 +10,7 @@ A modern, high-performance, responsive company portfolio for **SyncFura Digital*
 
 ## Sections
 1. Header (sticky, scroll-aware, mobile menu) + Hero
-2. About — brand meaning (AVE / NIQ / TECH), Vision, Mission
+2. About — brand meaning (Sync, Fura), Vision, Mission
 3. What We Do — Custom Web, AI & Automation, IoT
 4. Leadership & Engineering Team (5 profiles)
 5. Partners grid + CEO quote

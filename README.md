@@ -1,6 +1,6 @@
-# AVENIQTECH Portfolio
+# SyncFura Portfolio
 
-A modern, high-performance, responsive company portfolio for **AVENIQTECH SDN. BHD.** — dark high-tech theme (deep indigo, crisp white, electric violet accents).
+A modern, high-performance, responsive company portfolio for **SyncFura Digital** .
 
 ## Tech Stack
 - **Next.js 14** (App Router) + **TypeScript**
@@ -25,6 +25,6 @@ npm start        # serve production build
 ```
 
 ## Brand
-The `components/Logo.tsx` component renders the AVENIQTECH monogram + wordmark
+The `components/Logo.tsx` component renders the SyncFura monogram + wordmark
 (supports `light` / `dark` variants). Swap in a real logo file by replacing the
 SVG inside that component.

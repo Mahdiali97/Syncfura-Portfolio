@@ -118,7 +118,7 @@ export default function Contact() {
         <div className="mt-24 border-t border-ink/10 pt-10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <Logo variant="light" markSize={32} />
           <p className="text-sm text-ink-muted">
-            © 2026 AVENIQTECH SDN. BHD.
+            © 2026 SyncFura Digital
           </p>
           <div className="flex gap-6 text-sm text-ink-muted">
             <a href="#about" className="hover:text-accent transition">

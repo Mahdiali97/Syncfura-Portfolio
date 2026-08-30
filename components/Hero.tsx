@@ -57,11 +57,12 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.25 }}
           className="mt-7 text-lg sm:text-xl text-ink-muted max-w-3xl mx-auto leading-relaxed"
         >
-          AVENIQTECH builds the digital backbone through intelligent{" "}
+          SyncFura Digital builds the digital backbone through intelligent{" "}
           <span className="text-ink-soft font-semibold">Web</span>,{" "}
           <span className="text-ink-soft font-semibold">IoT</span>,{" "}
-          <span className="text-ink-soft font-semibold">AI</span>, and{" "}
-          <span className="text-ink-soft font-semibold">Automation</span> solutions —
+          <span className="text-ink-soft font-semibold">AI</span>,{" "}
+          <span className="text-ink-soft font-semibold">Automation</span>, and{" "}
+          <span className="text-ink-soft font-semibold">Data Analytics</span> solutions -
           engineered for reliability, scale, and the future of your business.
         </motion.p>
 

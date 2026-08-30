@@ -5,12 +5,12 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "AVENIQTECH SDN. BHD. — From Idea to Digital. Built to Last.",
+  title: "SyncFura Digital — From Idea to Digital. Built to Last.",
   description:
-    "AVENIQTECH builds the digital backbone of the modern enterprise through intelligent Web, IoT, AI, and Automation solutions.",
-  metadataBase: new URL("https://aveneqtech.example"),
+    "SyncFura Digital builds the digital backbone of the modern enterprise through intelligent Web, IoT, AI, and Automation solutions.",
+  metadataBase: new URL("https://www.syncfura.com"),
   openGraph: {
-    title: "AVENIQTECH SDN. BHD.",
+    title: "SyncFura Digital",
     description:
       "We build the digital backbone of the modern enterprise through intelligent Web, IoT, AI, and Automation solutions.",
     type: "website",

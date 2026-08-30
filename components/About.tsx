@@ -3,21 +3,21 @@ import { Target, Eye, Layers } from "lucide-react";
 
 const brandCards = [
   {
-    letter: "AVE",
-    title: "Advancing Value & Excellence",
-    desc: "Every line we ship is measured against real business value and an obsession with quality.",
+    letter: "SYNC",
+    title: "Synchronised Systems",
+    desc: "We synchronise people, data, and machines into a single, seamless digital ecosystem built to last.",
     icon: Layers,
   },
   {
-    letter: "NIQ",
-    title: "Innovation & Intelligence",
-    desc: "We turn raw data and emerging tech into intelligent systems that think ahead.",
+    letter: "FU",
+    title: "Fusion of Technologies",
+    desc: "We fuse Web, IoT, AI, and Automation into intelligent solutions that turn complexity into clarity.",
     icon: Target,
   },
   {
-    letter: "TECH",
-    title: "Technology",
-    desc: "The foundation we master — Web, IoT, AI and Automation — to build what lasts.",
+    letter: "RA",
+    title: "Rapid & Reliable",
+    desc: "We ship with agile rigour and comprehensive validation — quality you can depend on, speed you can feel.",
     icon: Eye,
   },
 ];
@@ -39,7 +39,7 @@ export default function About() {
             </span>
             <h2 className="mt-4 text-3xl sm:text-5xl font-extrabold text-ink leading-tight">
               The meaning behind{" "}
-              <span className="text-gradient-violet">AveniqTech</span>
+              <span className="text-gradient-violet">SyncFura</span>
             </h2>
             <p className="mt-5 text-lg text-ink-muted">
               Our name is a promise. It is the blueprint for how we engineer

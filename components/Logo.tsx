@@ -10,9 +10,8 @@ type LogoProps = {
 };
 
 /**
- * AVENIQTECH brand mark + wordmark.
- * The symbol is a geometric "A/V" monogram: a peaked A split by a long
- * diagonal stroke with a violet accent, echoing the uploaded logo.
+ * SyncFura Digital brand mark + wordmark.
+ * The symbol is the SyncFura logo mark with violet accent.
  */
 export default function Logo({
   variant = "dark",
@@ -30,7 +29,7 @@ export default function Logo({
     <div className={`flex items-center gap-3 select-none ${className}`}>
       <Image
         src="/Logo_Aveniq.png"
-        alt="Aveniq logo"
+        alt="Syncfura logo"
         width={markSize}
         height={markSize}
         className="shrink-0 object-contain"
@@ -43,20 +42,21 @@ export default function Logo({
             className="font-extrabold tracking-[0.18em] text-xl sm:text-2xl"
             style={{ color: "#443562" }}
           >
-            AVENI
+            Sync
             <span className="relative">
-              Q
+              Fu
               <span
                 className="absolute -bottom-1 left-1/2 h-[3px] w-3 rounded-full"
                 style={{ background: techColor, transform: "translateX(-10%)" }}
               />
             </span>
+            ra
           </div>
           <div
             className="text-[0.6rem] sm:text-xs font-bold tracking-[0.45em] mt-1"
             style={{ color: techColor }}
           >
-            TECH
+            DIGITAL
           </div>
         </div>
       )}

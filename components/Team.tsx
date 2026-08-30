@@ -3,7 +3,7 @@ import { Linkedin, Mail } from "lucide-react";
 
 const team = [
   {
-    name: "AISHATUL HANI BINTI AHMAD PUAD",
+    name: "AMIRUL AZIM BIN APANDI",
     role: "Chief Executive Officer (CEO) & Product Strategist",
     initials: "AH",
     accent: "from-accent-deep to-accent",
@@ -21,7 +21,7 @@ const team = [
     accent: "from-accent to-ink-soft",
   },
   {
-    name: "AMIRUL AZIM BIN APANDI",
+    name: "AISHATUL HANI BINTI AHMAD PUAD",
     role: "IoT & Embedded Systems Engineer",
     initials: "AA",
     accent: "from-accent-deep to-ink-soft",

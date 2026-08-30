@@ -23,7 +23,7 @@ const projects: Project[] = [
     title: "SmartExamDuty",
     teaser: "Automated teacher invigilation scheduling for exam duty management.",
     description:
-      "A web-based platform that automates the full lifecycle of teacher invigilation scheduling — from initial duty assignment and clash detection through to last-minute replacements and real-time tracking. Administrators gain a live dashboard view of all upcoming exams, pending slots, and confirmed invigilators.",
+      "A web-based platform that automates the full lifecycle of teacher invigilation scheduling - from initial duty assignment and clash detection through to last-minute replacements and real-time tracking. Administrators gain a live dashboard view of all upcoming exams, pending slots, and confirmed invigilators.",
     tools: ["Laravel", "MySQL", "Blade", "HTML/CSS", "JavaScript"],
     image: "/Projects/project1.png",
     category: "Web Platform",
@@ -35,7 +35,7 @@ const projects: Project[] = [
     title: "WattAware",
     teaser: "Smart energy app helping users monitor household electricity usage.",
     description:
-      "A mobile application designed to bring energy literacy to students and home users. WattAware lets users log appliances, understand consumption patterns through interactive lesson modules, simulate monthly bills, and receive personalised energy-saving tips — all in a playful, gamified interface.",
+      "A mobile application designed to bring energy literacy to students and home users. WattAware lets users log appliances, understand consumption patterns through interactive lesson modules, simulate monthly bills, and receive personalised energy-saving tips - all in a playful, gamified interface.",
     tools: ["Flutter", "Firebase"],
     image: "/Projects/project2.jpeg",
     category: "Mobile App",
@@ -47,7 +47,7 @@ const projects: Project[] = [
     title: "MYAid",
     teaser: "Digitizes disaster-relief centre registration to cut data errors.",
     description:
-      "A cross-platform mobile solution that replaces paper-based intake forms at disaster relief centres. MYAid enables on-site volunteers to register evacuees digitally, auto-validates data, and syncs records in real-time to a central dashboard — dramatically reducing errors and accelerating the distribution of aid.",
+      "A cross-platform mobile solution that replaces paper-based intake forms at disaster relief centres. MYAid enables on-site volunteers to register evacuees digitally, auto-validates data, and syncs records in real-time to a central dashboard, dramatically reducing errors and accelerating the distribution of aid.",
     tools: ["Flutter", "Firebase"],
     image: "/Projects/project3.jpeg",
     category: "Mobile App",
@@ -71,7 +71,7 @@ const projects: Project[] = [
     title: "CRM System",
     teaser: "GEP subscriber management with zone tracking & invoicing.",
     description:
-      "A full-featured Customer Relationship Management system built for the GEP platform. It provides company-level subscriber management, geographic zone assignment, on-site premise tracking, automated invoice generation, and role-based access control — giving the operations team a single source of truth for all client activity.",
+      "A full-featured Customer Relationship Management system built for the GEP platform. It provides company-level subscriber management, geographic zone assignment, on-site premise tracking, automated invoice generation, and role-based access control - giving the operations team a single source of truth for all client activity.",
     tools: ["React", "TypeScript", "MySQL"],
     image: "/Projects/project5.png",
     category: "Web Platform",
@@ -160,7 +160,7 @@ function ProjectModal({
           <X size={18} />
         </button>
 
-        {/* Full image — no cropping */}
+        {/* Full image - no cropping */}
         <div
           className="rounded-t-3xl overflow-hidden"
           style={{
@@ -338,7 +338,7 @@ export default function Projects() {
               <span className="text-gradient-violet">proud of</span>
             </h2>
             <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-              Real-world solutions we&rsquo;ve built — click any card to explore
+              Real-world solutions we&rsquo;ve built - click any card to explore
               the full story.
             </p>
           </div>

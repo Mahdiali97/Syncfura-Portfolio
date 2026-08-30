@@ -33,7 +33,7 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
-        <a href="#top" aria-label="AVENIQTECH home">
+        <a href="#top" aria-label="SyncFura Digital home">
           <Logo variant="light" />
         </a>
 

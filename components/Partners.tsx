@@ -56,7 +56,7 @@ export default function Partners() {
             <div className="mt-7 flex items-center justify-center gap-3">
               <span className="h-px w-8 bg-accent/60" />
               <span className="text-accent font-semibold tracking-wide">
-                Aisyatul Hani, CEO
+                Amirul Azim, CEO
               </span>
               <span className="h-px w-8 bg-accent/60" />
             </div>

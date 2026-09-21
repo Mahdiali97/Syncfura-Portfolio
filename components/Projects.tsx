@@ -6,7 +6,7 @@ import { X, ArrowUpRight } from "lucide-react";
 import Reveal from "./Reveal";
 
 interface Project {
-  id: number;
+  id: string;
   title: string;
   teaser: string;
   description: string;
@@ -19,65 +19,83 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 1,
+    id: "smartexam",
     title: "SmartExamDuty",
-    teaser: "Automated teacher invigilation scheduling for exam duty management.",
-    description:
-      "A web-based platform that automates the full lifecycle of teacher invigilation scheduling - from initial duty assignment and clash detection through to last-minute replacements and real-time tracking. Administrators gain a live dashboard view of all upcoming exams, pending slots, and confirmed invigilators.",
+    teaser: "Automated teacher invigilation scheduling.",
+    description: "A web-based platform that automates the full lifecycle of teacher invigilation scheduling—from initial duty assignment and clash detection through to last-minute replacements.
+
+Use Case: Administrators gain a live dashboard view of all upcoming exams, pending slots, and confirmed invigilators, eliminating manual scheduling conflicts.",
     tools: ["Laravel", "MySQL", "Blade", "HTML/CSS", "JavaScript"],
-    image: "/Projects/project1.png",
+    image: "/Projects/SmartExamDuty.png",
     category: "Web Platform",
     accentFrom: "#6366f1",
     accentTo: "#8b5cf6",
   },
   {
-    id: 2,
+    id: "wattaware",
     title: "WattAware",
-    teaser: "Smart energy app helping users monitor household electricity usage.",
-    description:
-      "A mobile application designed to bring energy literacy to students and home users. WattAware lets users log appliances, understand consumption patterns through interactive lesson modules, simulate monthly bills, and receive personalised energy-saving tips - all in a playful, gamified interface.",
+    teaser: "Energy literacy & simulated billing platform.",
+    description: "A mobile application designed to bring energy literacy to students and home users through a playful, gamified interface.
+
+Use Case: Users log appliances to understand consumption patterns via interactive lesson modules, simulate monthly bills, and receive personalized energy-saving tips.",
     tools: ["Flutter", "Firebase"],
-    image: "/Projects/project2.jpeg",
-    category: "Mobile App",
-    accentFrom: "#10b981",
-    accentTo: "#06b6d4",
-  },
-  {
-    id: 3,
-    title: "MYAid",
-    teaser: "Digitizes disaster-relief centre registration to cut data errors.",
-    description:
-      "A cross-platform mobile solution that replaces paper-based intake forms at disaster relief centres. MYAid enables on-site volunteers to register evacuees digitally, auto-validates data, and syncs records in real-time to a central dashboard, dramatically reducing errors and accelerating the distribution of aid.",
-    tools: ["Flutter", "Firebase"],
-    image: "/Projects/project3.jpeg",
+    image: "/Projects/WattAware.jpeg",
     category: "Mobile App",
     accentFrom: "#3b82f6",
-    accentTo: "#6366f1",
+    accentTo: "#2dd4bf",
   },
   {
-    id: 4,
-    title: "NadiPutra Rider",
-    teaser: "Real-time bus tracking & route planning app for Putrajaya.",
-    description:
-      "A public transit companion app for Putrajaya bus passengers. The app shows live bus positions on a map, calculates optimal routes, displays nearby stops, and lets riders share trip plans with friends. Built with RESTful transit APIs for accurate, low-latency position updates.",
-    tools: ["Flutter", "Firebase", "RESTful APIs"],
-    image: "/Projects/project4.jpeg",
+    id: "myaid",
+    title: "MYAid",
+    teaser: "Paperless disaster relief registration platform.",
+    description: "A cross-platform mobile solution that completely replaces paper-based intake forms at disaster relief centres.
+
+Use Case: Enables on-site volunteers to register evacuees digitally, auto-validates data, and syncs records in real-time to a central dashboard to accelerate aid distribution.",
+    tools: ["Flutter", "Firebase"],
+    image: "/Projects/MYAid.jpeg",
     category: "Mobile App",
-    accentFrom: "#7c3aed",
-    accentTo: "#a855f7",
+    accentFrom: "#f43f5e",
+    accentTo: "#f97316",
   },
   {
-    id: 5,
-    title: "CRM System",
-    teaser: "GEP subscriber management with zone tracking & invoicing.",
-    description:
-      "A full-featured Customer Relationship Management system built for the GEP platform. It provides company-level subscriber management, geographic zone assignment, on-site premise tracking, automated invoice generation, and role-based access control - giving the operations team a single source of truth for all client activity.",
-    tools: ["React", "TypeScript", "MySQL"],
-    image: "/Projects/project5.png",
-    category: "Web Platform",
-    accentFrom: "#f43f5e",
+    id: "nadiputra",
+    title: "NadiPutra Rider",
+    teaser: "Real-time Putrajaya bus transit tracking.",
+    description: "A public transit companion app engineered specifically for Putrajaya bus passengers to eliminate wait-time uncertainty.
+
+Use Case: Shows live bus positions on a map, calculates optimal routes, displays nearby stops, and leverages RESTful transit APIs for low-latency position updates.",
+    tools: ["REST API", "Mobile Transit"],
+    image: "/Projects/NadiPutra.jpeg",
+    category: "Mobile App",
+    accentFrom: "#8b5cf6",
     accentTo: "#ec4899",
   },
+  {
+    id: "gepcrm",
+    title: "GEP CRM System",
+    teaser: "Subscriber management platform.",
+    description: "A full-featured Customer Relationship Management system built for the GEP platform, handling company-level subscriber management, zone assignment, and automated invoicing.
+
+Use Case: Integrates deeply with the GEP Next security operations module. It features two-factor authentication, smart alerts, and strict UI logic where selecting 'continue overtime' instantly triggers a dedicated Clock-In screen rather than just recording a static note.",
+    tools: ["React", "TypeScript", "MySQL"],
+    image: "/Projects/GEPCRMSystem.png",
+    category: "Web Platform",
+    accentFrom: "#06b6d4",
+    accentTo: "#3b82f6",
+  },
+  {
+    id: "uniperks",
+    title: "UniPerks",
+    teaser: "University merchandise e-commerce platform.",
+    description: "Our proprietary e-commerce application dedicated entirely to promoting and scaling university merchandise sales.
+
+Use Case: Built from the ground up with comprehensive SRS and SDD documentation, this platform introduces an AI virtual try-on feature to revolutionize how students interact with university apparel.",
+    tools: ["E-commerce", "AI Virtual Try-On", "Mobile"],
+    image: "/hero-backbone.jpg",
+    category: "E-Commerce",
+    accentFrom: "#10b981",
+    accentTo: "#3b82f6",
+  }
 ];
 
 const toolColors: Record<string, string> = {
@@ -311,71 +329,164 @@ function ProjectCard({
 }
 
 /* ── Section ───────────────────────────────────────────────────────── */
+
+import { motion, AnimatePresence } from "framer-motion";
+
 export default function Projects() {
-  const [selected, setSelected] = useState<Project | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+
+  // Close on escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedId(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
-    <section id="projects" className="relative py-24 sm:py-32 section-glow">
-      {/* Soft background shapes */}
-      <div
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-        aria-hidden
-      >
-        <div className="absolute -top-24 left-1/4 w-[500px] h-[500px] rounded-full bg-violet-100/60 blur-3xl" />
-        <div className="absolute top-1/2 right-0 w-[350px] h-[350px] rounded-full bg-indigo-100/50 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-purple-100/40 blur-3xl" />
-      </div>
-
-      <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
-        {/* Header */}
-        <Reveal>
-          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <span className="text-sm font-semibold tracking-[0.3em] text-violet-500 uppercase">
-              Our Work
-            </span>
-            <h2 className="mt-4 text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
-              Projects we&rsquo;re{" "}
-              <span className="text-gradient-violet">proud of</span>
-            </h2>
-            <p className="mt-5 text-lg text-slate-500 leading-relaxed">
-              Real-world solutions we&rsquo;ve built - click any card to explore
-              the full story.
-            </p>
+    <section id="projects" className="py-32 bg-[#FAFAFC] relative overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+          className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8"
+        >
+          <div>
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase text-neutral-950">Selected Works</h2>
+            <p className="text-xl text-neutral-500 mt-4 max-w-xl">A showcase of scalable platforms, mobile applications, and intelligent systems engineered for the modern enterprise.</p>
           </div>
-        </Reveal>
-
-        {/* 5-card grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((project, i) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={i}
-              onClick={() => setSelected(project)}
-            />
+        </motion.div>
+        
+        {/* The Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((p, i) => (
+            <motion.div
+              layoutId={`card-container-${p.id}`}
+              key={p.id}
+              onClick={() => setSelectedId(p.id)}
+              className="group relative cursor-pointer flex flex-col bg-white/50 backdrop-blur-sm rounded-3xl border border-neutral-200/50 hover:border-purple-300/50 transition-colors duration-500 overflow-hidden"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, delay: i * 0.1, ease: [0.76, 0, 0.24, 1] }}
+            >
+              {/* Subtle hover glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(circle_at_bottom,rgba(124,58,237,0.08)_0,transparent_60%)] pointer-events-none" />
+              
+              <motion.div layoutId={`image-container-${p.id}`} className="relative h-64 w-full overflow-hidden bg-neutral-100">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+              </motion.div>
+              
+              <div className="p-8 flex flex-col flex-grow relative z-10">
+                <motion.h3 layoutId={`title-${p.id}`} className="text-2xl font-bold tracking-tight text-neutral-900 mb-2">
+                  {p.title}
+                </motion.h3>
+                <motion.p layoutId={`desc-${p.id}`} className="text-neutral-500 mb-6 flex-grow">
+                  {p.teaser}
+                </motion.p>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {p.tools.slice(0, 3).map(tag => (
+                    <span key={tag} className="px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-xs font-medium border border-neutral-200/50">
+                      {tag}
+                    </span>
+                  ))}
+                  {p.tools.length > 3 && (
+                    <span className="px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-xs font-medium border border-neutral-200/50">
+                      +{p.tools.length - 3}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <Reveal delay={0.15}>
-          <div className="mt-14 text-center">
-            <p className="text-slate-400 text-sm mb-4">
-              Have a project in mind? Let&rsquo;s build it together.
-            </p>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-violet-300 bg-violet-50 hover:bg-violet-100 hover:border-violet-400 px-7 py-3 text-sm font-semibold text-violet-700 transition-all duration-300"
-            >
-              Start a Conversation →
-            </a>
-          </div>
-        </Reveal>
       </div>
 
-      {/* Modal */}
-      {selected && (
-        <ProjectModal project={selected} onClose={() => setSelected(null)} />
-      )}
+      {/* Expanded Modal (AnimatePresence) */}
+      <AnimatePresence>
+        {selectedId && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="fixed inset-0 z-50 bg-black/40 backdrop-blur-xl cursor-pointer"
+              onClick={() => setSelectedId(null)}
+            />
+            
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-12 pointer-events-none">
+              {projects.filter(p => p.id === selectedId).map(p => (
+                <motion.div
+                  layoutId={`card-container-${p.id}`}
+                  key={p.id}
+                  className="bg-white w-full max-w-6xl max-h-[90vh] rounded-[2rem] overflow-hidden flex flex-col md:flex-row shadow-2xl pointer-events-auto relative"
+                  transition={{ type: "spring", stiffness: 200, damping: 25, mass: 1 }}
+                >
+                  <button 
+                    onClick={() => setSelectedId(null)}
+                    className="absolute top-6 right-6 z-10 w-12 h-12 bg-white/50 backdrop-blur-md border border-neutral-200/50 rounded-full flex items-center justify-center text-neutral-900 hover:bg-white hover:scale-110 transition-all duration-300"
+                  >
+                    <X size={20} />
+                  </button>
+
+                  <motion.div layoutId={`image-container-${p.id}`} className="w-full md:w-1/2 relative h-64 md:h-full bg-neutral-100">
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </motion.div>
+
+                  <div className="w-full md:w-1/2 p-8 md:p-16 overflow-y-auto bg-white flex flex-col">
+                    <motion.h3 layoutId={`title-${p.id}`} className="text-4xl md:text-5xl font-black tracking-tight text-neutral-900 mb-4">
+                      {p.title}
+                    </motion.h3>
+                    <motion.p layoutId={`desc-${p.id}`} className="text-xl text-neutral-500 mb-8 font-medium">
+                      {p.teaser}
+                    </motion.p>
+                    
+                    <motion.div 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2, duration: 0.6 }}
+                      className="space-y-8"
+                    >
+                      <div>
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-purple-600 mb-3">Overview & Logic</h4>
+                        <p className="text-neutral-600 leading-relaxed text-lg whitespace-pre-line">{p.description}</p>
+                      </div>
+
+                      <div>
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-purple-600 mb-4">Tech Stack</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {p.tools.map(tag => (
+                            <span key={tag} className="px-4 py-2 bg-neutral-50 text-neutral-700 rounded-lg text-sm font-semibold border border-neutral-200/50">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
